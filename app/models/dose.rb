@@ -4,6 +4,4 @@ class Dose < ApplicationRecord
 
   validates :description, presence: true
   validates :cocktail_id, uniqueness: { scope: :ingredient_id }
-
-  INGREDIENTS = Ingredient.all.map { |ingredient| [ingredient.name, ingredient.id] }
 end

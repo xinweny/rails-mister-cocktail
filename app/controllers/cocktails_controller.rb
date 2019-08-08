@@ -2,10 +2,11 @@ class CocktailsController < ApplicationController
   before_action :set_cocktail, only: %i[show edit update destroy]
 
   def index
-    @cocktails = Cocktail.all
+    @cocktails = Cocktail.search(params[:search])
   end
 
   def show
+    @dose = Dose.new
   end
 
   def new
@@ -45,6 +46,6 @@ class CocktailsController < ApplicationController
   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :search)
   end
 end

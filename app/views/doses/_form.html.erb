@@ -1,5 +1,5 @@
 <%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :ingredient_id, as: :select, collection: Dose::INGREDIENTS %>
+  <%= f.association :ingredient, collection: Ingredient.all, class: 'select2' %>
   <%= f.input :description %>
   <%= f.submit 'Add' %>
 <% end %>
