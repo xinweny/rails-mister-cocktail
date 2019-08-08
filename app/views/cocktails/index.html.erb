@@ -1,9 +1,7 @@
-<h2>Cocktails</h2>
-<div class="cocktails">
+<div class="cocktails d-flex flex-wrap">
   <% @cocktails.each do |cocktail| %>
-    <div class="cocktail-card">
+    <div class="cocktail-card card-category mx-2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
       <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
     </div>
-    <p><%= link_to 'Delete', cocktail_path(cocktail) %></p>
   <% end %>
 </div>

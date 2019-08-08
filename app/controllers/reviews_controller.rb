@@ -3,6 +3,7 @@ class ReviewsController < ApplicationController
 
   def new
     @review = Review.new
+    redirect_to cocktail_path(@cocktail)
   end
 
   def create
@@ -11,7 +12,8 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to cocktail_path(@cocktail)
     else
-      render :new
+      @dose = Dose.new
+      render 'cocktails/show'
     end
   end
 

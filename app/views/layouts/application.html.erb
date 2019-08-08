@@ -12,20 +12,21 @@
   </head>
 
   <body>
-    <div class="header d-flex">
-      <h1><%= link_to 'Mister Cocktail', cocktails_path %></h1>
-      <div class="d-flex">
-        <%= form_tag(cocktails_path, method: :get) do %>
-          <%= text_field_tag(:search, params[:search]) %>
-          <%= submit_tag 'Search' %>
-        <% end %>
-        <%= link_to 'Add a Cocktail', new_cocktail_path %>
+    <div class="container">
+      <div class="header d-flex align-items-center justify-content-between">
+        <h1><%= link_to 'Mister Cocktail', cocktails_path %></h1>
+        <div class="d-flex align-items-center">
+          <%= form_tag(cocktails_path, method: :get, class: 'mx-4') do %>
+            <%= text_field_tag :search, params[:search], placeholder: 'Search', class: 'form-control' %>
+          <% end %>
+          <%= link_to 'Add a Cocktail', new_cocktail_path, class: 'btn btn-primary' %>
+        </div>
       </div>
+
+      <%= yield %>
+
+      <%= javascript_include_tag "application" %>
+      <%= javascript_pack_tag "application" %>
     </div>
-
-    <%= yield %>
-
-    <%= javascript_include_tag "application" %>
-    <%= javascript_pack_tag "application" %>
   </body>
 </html>

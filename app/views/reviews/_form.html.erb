@@ -1,5 +1,7 @@
 <%= simple_form_for [@cocktail, @review] do |f| %>
-  <%= f.input :content %>
-  <%= f.input :rating, as: :radio_buttons, collection: 1..5, wrapper: :vertical_collection_inline %>
+  <div class="d-flex">
+    <%= f.input :rating, label: false,  as: :radio_buttons, collection: 1..5, wrapper: :vertical_collection_inline %>
+  </div>
+  <%= f.input :content, label: false, placeholder: 'Write your review here!' %>
   <%= f.submit 'Add review' %>
 <% end %>
