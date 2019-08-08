@@ -12,6 +12,11 @@
   </head>
 
   <body>
+    <div class="header d-flex">
+      <h1><%= link_to 'Mister Cocktail', cocktails_path %></h1>
+      <%= link_to 'Add a Cocktail', new_cocktail_path %>
+    </div>
+
     <%= yield %>
 
     <%= javascript_include_tag "application" %>
