@@ -1,0 +1,50 @@
+@import "./components/form.scss";
+@import "./components/button.scss";
+
+.show-container {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+#cocktail-name {
+  font-family: 'Yellowtail', cursive;
+  font-size: 48px;
+  padding-right: 16px;
+}
+
+.show-title {
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+.cocktail-header {
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.6);
+  margin-bottom: 32px;
+  padding-bottom: 8px;
+}
+
+.fa-pen-fancy {
+  padding-right: 8px;
+}
+
+.reviews {
+  padding-bottom: 24px;
+}
+
+.review {
+  .fa-star {
+    font-size: 12px;
+  }
+}
+
+.rating {
+  padding-right: 16px;
+}
+
+.ingredient-details {
+  padding-right: 16px;
+}

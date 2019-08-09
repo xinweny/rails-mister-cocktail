@@ -1,7 +1,19 @@
-<div class="cocktails d-flex flex-wrap">
+<div class="cocktails d-flex flex-wrap justify-content-around">
   <% @cocktails.each do |cocktail| %>
-    <div class="cocktail-card card-category mx-2" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+    <div class="cocktail-card mx-2" style="background-image: transparent">
+      <div class="cocktail-card-content d-flex justify-content-around align-items-center">
+        <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+        <% if cocktail.reviews.length.zero? %>
+          <% rating = 0 %>
+        <% else %>
+          <% rating = cocktail.reviews.map(&:rating).sum / cocktail.reviews.length %>
+        <% end %>
+        <div class="cocktail-rating">
+          <% rating.times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>

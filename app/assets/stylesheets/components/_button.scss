@@ -1,2 +1,13 @@
-.search-button {
+.button {
+  background-color: transparent;
+  padding: 8px 16px;
+  border: 2px white solid;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  color: white;
+  &:hover {
+    color: black;
+    border-color: black;
+  }
 }

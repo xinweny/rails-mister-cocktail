@@ -1,16 +1,37 @@
-.card-category {
+.cocktail-card {
   background-size: cover;
   background-position: center;
   text-align: center;
-  height: 200px;
-  width: 200px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  height: 300px;
+  width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   font-size: 24px;
-  font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
+  padding: 8px;
+  font-family: 'Yellowtail', cursive;
+  font-weight: 300;
+}
+
+.cocktail-card-content {
+  position: relative;
+  background-image: asset-url('gin_and_tonic.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  p {
+    font-size: 32px;
+  }
   padding: 16px;
+}
+
+.cocktail-rating {
+  font-size: 20px;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
 }
