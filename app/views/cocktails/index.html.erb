@@ -6,7 +6,7 @@
         <% if cocktail.reviews.length.zero? %>
           <% rating = 0 %>
         <% else %>
-          <% rating = cocktail.reviews.map(&:rating).sum / cocktail.reviews.length %>
+          <% rating = (cocktail.reviews.map(&:rating).sum.to_f / cocktail.reviews.length).round %>
         <% end %>
         <div class="cocktail-rating">
           <% rating.times do %>
