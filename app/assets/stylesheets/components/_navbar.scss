@@ -6,13 +6,9 @@
 }
 
 #title a {
-  color: black;
   font-family: 'Mr Dafoe', cursive;
   font-size: 56px;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   transition: 0.2;
-  &:hover {
-    color: white !important;
-  }
 }
 
