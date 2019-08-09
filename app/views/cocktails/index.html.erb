@@ -1,7 +1,7 @@
 <div class="cocktails d-flex flex-wrap justify-content-around">
   <% @cocktails.each do |cocktail| %>
     <div class="cocktail-card mx-2" style="background-image: transparent">
-      <div class="cocktail-card-content d-flex justify-content-around align-items-center">
+      <div class="cocktail-card-content d-flex justify-content-around align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= card_background_path(cocktail) %>)">
         <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
         <% if cocktail.reviews.length.zero? %>
           <% rating = 0 %>

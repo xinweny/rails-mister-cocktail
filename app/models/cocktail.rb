@@ -5,6 +5,8 @@ class Cocktail < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
 
+  mount_uploader :image, ImageUploader
+
   def self.search(search)
     return Cocktail.all unless search
 

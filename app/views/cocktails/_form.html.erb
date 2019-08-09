@@ -1,5 +1,7 @@
 <%= simple_form_for @cocktail do |f| %>
   <%= f.input :name %>
+  <%= f.input :image %>
+  <%= f.input :image_cache, as: :hidden %>
   <% if @cocktail.id.nil? %>
     <%= f.submit 'Create!', class: 'button cocktail-button rounded' %>
   <% else %>
