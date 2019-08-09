@@ -22,7 +22,10 @@
         <%= form_tag(cocktails_path, method: :get, class: 'logo mx-4') do %>
           <%= text_field_tag :search, params[:search], placeholder: 'Search', class: 'form-control search-bar' %>
         <% end %>
-        <%= link_to 'Add a Cocktail', new_cocktail_path, class: 'button add-button rounded-pill' %>
+        <%= link_to 'Add a Cocktail', new_cocktail_path, class: 'button add-button rounded-pill d-none d-lg-block' %>
+        <%= link_to new_cocktail_path, class: 'd-block d-md-none' do %>
+          <i class="fas fa-plus"></i>
+        <% end %>
       </div>
     </div>
 

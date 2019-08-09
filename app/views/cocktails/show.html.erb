@@ -10,8 +10,8 @@
       <% end %>
     </div>
 
-    <div class="ingredients-container d-flex justify-content-between">
-      <div class="d-flex flex-column justify-content-between">
+    <div class="ingredients-container d-flex justify-content-between flex-wrap-reverse">
+      <div class="ingredients-content d-flex flex-column justify-content-around">
         <div class="ingredients">
           <h3 class="show-title">Ingredients</h3>
           <% doses = Dose.where('cocktail_id = ?', @cocktail.id) %>

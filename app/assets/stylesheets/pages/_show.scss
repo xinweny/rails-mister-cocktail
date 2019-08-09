@@ -8,6 +8,10 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
+.ingredients-container {
+  margin: 0 auto;
+}
+
 #cocktail-name {
   font-family: 'Yellowtail', cursive;
   font-size: 48px;
@@ -43,4 +47,14 @@
 
 .ingredient-details {
   padding-right: 16px;
+}
+
+@media(max-width: 768px) {
+  .show-image {
+    margin: 0 auto;
+  }
+
+  .ingredients-content {
+    margin: 0 auto;
+  }
 }
